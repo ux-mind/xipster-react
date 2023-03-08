@@ -1,20 +1,19 @@
 import React from 'react';
 import { Flex } from '@chakra-ui/react';
+import { default as Header } from '../Header';
 
 const Page = ({ children, ...rest }) => (
+  <>
+  <Header />
   <Flex
-    width='100vw'
-    minWidth='300px'
     overflowX='hidden'
     direction='column'
     {...rest}
   >
-    {/*header*/}
-
     {children}
-
-    {/*footer*/}
   </Flex>
+  {/* <Footer /> */}
+  </>
 );
 
 export default Page;
