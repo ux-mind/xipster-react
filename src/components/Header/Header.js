@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from '../../images/logo.svg';
 import world from '../../images/world.svg';
+import burger from '../../images/burger.svg';
 
 import {
   Box,
@@ -19,6 +20,7 @@ import {
   useBreakpointValue,
   useDisclosure,
   Container,
+  Image
 } from '@chakra-ui/react';
 import {
   HamburgerIcon,
@@ -32,36 +34,47 @@ const Header = () => {
   return (
     <Box
       bg={'#232426'}
-      py={"24px"}>
-      <Container maxW={'1278px'} p={0}>
+      py={{ base: "21px", xl: "24px" }}>
+      <Container maxW={'1278px'} px={{ base: "24px", xl: 0 }}>
         <Flex
           align={'center'}>
-          <Flex
-            flex={{ base: 1, md: 'auto' }}
-            ml={{ base: -2 }}
-            display={{ base: 'flex', md: 'none' }}>
-            <IconButton
-              onClick={onToggle}
-              icon={
-                isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />
-              }
-              variant={'ghost'}
-              aria-label={'Toggle Navigation'}
-            />
-          </Flex>
-          <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
+          <Flex flex={{ base: 1 }} justify={ 'start' }>
             <Link
+              flexShrink={0}
               as={"a"}
               href={"/"}>
-              <img src={logo} className="App-logo" alt="logo" />
+              <Image
+                src={logo}
+                alt="logo"
+                w={{ base: "129px", md: "168px"}}
+              />
             </Link>
 
-            <Flex display={{ base: 'none', md: 'flex' }} ml={"74px"}>
+            <Flex display={{ base: 'none', xl: 'flex' }} ml={"74px"}>
               <DesktopNav />
             </Flex>
           </Flex>
+          <Flex
+            flex={{ base: 1, md: 'auto' }}
+            justifyContent={ 'end' }
+            ml={{ base: -2 }}
+            display={{ base: 'flex', xl: 'none' }}>
+            <IconButton
+              /*onClick={onToggle}*/
+              icon={
+                isOpen ? <CloseIcon w={3} h={3} /> : <Image src={burger} alt="" w={"28px"} h={"28px"} />
+              }
+              h={"auto"}
+              variant={'ghost'}
+              aria-label={'Toggle Navigation'}
+              _hover={{
+                bg: 'none'
+              }}
+            />
+          </Flex>
 
           <Stack
+            display={{ base: 'none', xl: 'flex' }}
             flex={{ base: 1, md: 0 }}
             justify={'flex-end'}
             direction={'row'}
@@ -126,11 +139,9 @@ const Header = () => {
 
 const DesktopNav = () => {
   const linkColor = 'white';
-  const linkHoverColor = useColorModeValue('gray.800', 'white');
-  const popoverContentBgColor = useColorModeValue('white', 'gray.800');
 
   return (
-    <Stack direction={'row'} spacing={"40px"}>
+    <Stack direction={'row'} spacing={'40px'}>
       {NAV_ITEMS.map((navItem) => (
         <Flex align="center" justify="center" key={navItem.label}>
           <Popover trigger={'hover'} placement={'bottom-start'}>

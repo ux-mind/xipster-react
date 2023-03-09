@@ -21,41 +21,46 @@ import {
       <Box
         w={'100%'}
         bg={"#F7F7F7"}>
-        <Container maxW={'1278px'} p={0}>
+        <Container maxW={'1278px'} py={0}  px={{ base: "24px", xl: 0 }}>
           <Stack
             align={'center'}
-            py={"93px"}
+            py={{ base: '56px', lg: '93px' }}
             direction={{ base: 'column', md: 'row' }}>
             <Box flex={1} >
               <Heading
-                lineHeight={"59px"}
+                lineHeight={{ base: '37px', lg: '59px' }}
                 fontWeight={500}
-                fontSize={{ base: '45px', sm: '45px', lg: '45px' }}>
+                fontSize={{ base: '28px', lg: '45px' }}>
                 <Text as={'span'} color={'#232426'}>
                   All-in-One Payments and Communications solution to grow your business
                 </Text>
               </Heading>
               <Box
                 color={'#232426'}
-                mt={'16px'}
-                fontSize="18px">
+                mt={{ base: '11px', lg: '16px' }}
+                lineHeight={{ base: '22px', lg: '25px' }}
+                fontSize={{ base: '16px', lg: '18px' }}>
                 Build, automate, and personalize customer experiences in all of your communications,
                 including payments, text marketing, B2B, and more, with Xipster
               </Box>
               <Button
-                mt="40px"
+                mt={{ base: '31px', lg: '40px' }}
                 bg={'#4838E4'}
                 borderRadius={"12px"}
                 color={"white"}
                 w={"168px"}
-                h={"55px"}
-                _hover={{ bg: 'red.500' }}>
+                h={{ base: '50px', lg: '55px' }}
+                fontWeight={600}
+                fontSize={{ base: '16px', lg: '18px' }}
+                _hover={{ bg: 'white', color: '#232426', border: '1px solid #232426' }}>
                 Get Xipster
               </Button>
             </Box>
             <Flex
+              pl={{ base: '0', md: '15px' }}
+              pt={{ base: '56px', md: '0' }}
               flex={1}
-              justify={'center'}
+              justify={{ base: 'center', md: 'end' }}
               align={'center'}
               position={'relative'}
               w={'full'}>
@@ -65,7 +70,7 @@ import {
                   align={'center'}
                   w={'100%'}
                   h={'100%'}
-                  maxWidth={"627px"}
+                  maxWidth={{ base: '327px', md: '563px' }}
                   src={home_hero}
                 />
             </Flex>
