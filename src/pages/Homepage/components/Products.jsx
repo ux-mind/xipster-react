@@ -136,7 +136,7 @@ const Products = () => {
               maxW={"522px"}
               pl={{ base: '0', md: '25px', xl: '0' }}
               pr={{ base: '0', xl: '52px' }}
-              minW={"350px"}
+              minW={{ base: '0', sm: '350px' }}
             >
               <Heading
                 lineHeight={{ base: '30px', md: '45px' }}

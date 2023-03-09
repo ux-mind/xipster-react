@@ -19,18 +19,18 @@ import arrow_right_white from '../../../images/arrow-right-white.svg';
 const Tab = ({ text }) => {
     return (
         <Button
-            height={"50px"}
-            px={"24px"}
+            height={{ base: '40px', md: '50px' }}
+            px={{ base: '12px', md: '24px' }}
             as={'a'}
-            display={{ base: 'none', md: 'inline-flex' }}
-            fontSize={'18px'}
-            fontWeight={500}
+            display={'inline-flex'}
+            fontSize={{ base: '14px', md: '18px' }}
+            fontWeight={{ base: 600, md: 500 }}
             color={'white'}
             href={'#'}
             bg={"none"}
             border={"1.5px"}
             borderStyle={"solid"}
-            borderRadius={"30px"}
+            borderRadius={{ base: '25px', md: '30px' }}
             borderColor={"white"}
             _hover={{
                 bg: 'white',
@@ -43,13 +43,13 @@ const Tab = ({ text }) => {
 
 const Features = () => {
     return (
-        <Box p={"71px 0 76px"} bg={"#20201D"} w={"100%"} color={"white"}>
-        <Container maxW={'1278px'} p={0}>
-            <Heading fontSize={"36px"} fontWeight={'400px'} textAlign={"center"}>
+        <Box p={{ base: "64px 0 70px", xl: "71px 0 76px" }} bg={"#20201D"} w={"100%"} color={"white"}>
+        <Container maxW={'1278px'} py={0}  px={{ base: "24px", xl: 0 }}>
+            <Heading fontSize={{ base: '24px', md: '36px' }} fontWeight={'500px'} textAlign={"center"}>
                 Powerful features of Xipster
             </Heading>
 
-            <Flex mt="40px" gridGap={"16px"} justify="left" flexWrap={"wrap"}>
+            <Flex mt={{ base: '32px', md: '40px' }} gridGap={{ base: '12px', md: '16px' }} justify="left" flexWrap={"wrap"}>
                 <Tab text={"Card on File"} />
                 <Tab text={"Partial Payments"} />
                 <Tab text={"Connect Your Team"} />
@@ -59,36 +59,45 @@ const Features = () => {
                 <Tab text={"Accounting & Integration"} />
                 <Tab text={"Quotes & Estimates"} />
                 <Tab text={"Loyalty"} />
-                <Tab text={"EFT"} />
+                <Tab text={"B2B"} />
             </Flex>
 
             <Stack
+                spacing={0}
                 align={'center'}
                 mt={"56px"}
                 direction={{ base: 'column', md: 'row' }}
                 justifyContent={"space-between"}>
-                <Box flex={1} maxW={"522px"} pr={"52px"}>
+                <Box
+                    flex={1}
+                    maxW={"522px"}
+                    minW={{ base: '0', sm: '350px' }}
+                    pr={{ base: '0', md: '52px' }}
+                    pb={{ base: '32px', md: '0' }}
+                >
                     <Heading
-                        lineHeight={"47px"}
+                        lineHeight={{ base: '30px', md: '47px' }}
                         fontWeight={500}
-                        fontSize={{ base: '36px', sm: '36px', lg: '36px' }}>
+                        fontSize={{ base: '24px', md: '36px' }}>
                         <Text as={'span'} color={'#EDEDED'}>
                         Card on File
                         </Text>
                     </Heading>
                     <Box
                         color={'#EDEDED'}
-                        mt={'16px'}
+                        mt={{ base: '8px', md: '16px' }}
                         fontSize="16px"
                         fontWeight={500}
                         maxW={"410px"}>
                         Securely save customer card on file for future business
                     </Box>
                     <Button
+                        fontSize={{ base: '16px', md: '16px' }}
+                        fontWeight={600}
                         border={'1.5px solid white'}
                         borderRadius={'12px'}
-                        p={'7px 24px'}
-                        mt={'40px'}
+                        p={{ base: '3.5px 22px', md: '7px 22px' }}
+                        mt={{ base: '24px', md: '40px' }}
                         variant={'link'}
                         color={'white'}
                         size={'sm'}
@@ -107,9 +116,9 @@ const Features = () => {
                 bg={'#323233'}
                 borderRadius={'30px'}
                 width={'100%'}
-                height={'425px'}
+                height={{ base: "222px", md: "300px", xl: '350px' }}
                 maxW={'627px'}
-                p={'43px 72px'}>
+                p={{ base: "10px 10px", md: "21px 36px", xl: '43px 72px' }}>
                     <Image
                     alt={'Feature Image'}
                     align={'center'}
