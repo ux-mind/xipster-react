@@ -5,6 +5,7 @@ import { Page } from '../../components';
 import { Intro } from './components';
 import { Products } from './components';
 import { Features } from './components';
+import { Optimize } from './components';
 
 const Homepage = () => (
   <Page
@@ -14,6 +15,7 @@ const Homepage = () => (
     <Intro />
     <Products />
     <Features />
+    <Optimize />
     
   </Page>
 );

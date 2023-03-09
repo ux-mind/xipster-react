@@ -14,7 +14,6 @@ import { ReactElement } from 'react';
 
 import product_1 from '../../../images/product-1.svg';
 import product_2 from '../../../images/product-2.svg';
-import product_3 from '../../../images/product-3.svg';
 import arrow_right from '../../../images/arrow-right.svg';
 import product_dialog from '../../../images/product-dialog.svg';
 
