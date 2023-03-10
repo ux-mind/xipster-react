@@ -4,3 +4,4 @@ export { default as Features } from './Features';
 export { default as Optimize } from './Optimize';
 export { default as MoreReasons } from './MoreReasons';
 export { default as CustomersFeedback } from './CustomersFeedback';
+export { default as ReadyToGrow } from './ReadyToGrow';
