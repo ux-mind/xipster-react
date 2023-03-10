@@ -51,15 +51,15 @@ const Features = () => {
 
             <Flex mt={{ base: '32px', md: '40px' }} gridGap={{ base: '12px', md: '16px' }} justify="left" flexWrap={"wrap"}>
                 <Tab text={"Card on File"} />
-                <Tab text={"Partial Payments"} />
                 <Tab text={"Connect Your Team"} />
-                <Tab text={"Multi-Location View"} />
-                <Tab text={"Account Updater"} />
-                <Tab text={"Text Marketing"} />
-                <Tab text={"Accounting & Integration"} />
                 <Tab text={"Quotes & Estimates"} />
-                <Tab text={"Loyalty"} />
+                <Tab text={"Partial Payments"} />
+                <Tab text={"Text Marketing"} />
+                <Tab text={"Account Updater"} />
+                <Tab text={"Accounting & Integration"} />
                 <Tab text={"B2B"} />
+                <Tab text={"Multi-Location View"} />
+                <Tab text={"Loyalty"} />
             </Flex>
 
             <Stack

@@ -27,6 +27,7 @@ const SocialBlock = ({mobile}) => {
           }
           return (
             <Link
+            key={'footer-social-link-' + i}
             mr={!lastElem ? '24px' : 0}
             flexShrink={0}
             as='a'
@@ -72,10 +73,10 @@ const Footer = () => {
             <Flex
               display={{ base: 'grid', xl: 'flex' }}
               gridTemplateColumns='auto auto'
-              gridRowGap='31px'
-              gridColumnGap='56px'
+              gridRowGap={{ base: '31px', xl: '0' }}
+              gridColumnGap={{ base: '56px', xl: '0' }}
               ml={{ base: 0, xl: 'auto' }}
-              maxW={{ base: '327px', xl: '2000px' }}
+              maxW={{ base: '327px', xl: '952px' }}
               mt={{ base: '32px', xl: '8px' }}>
               {NAV_ITEMS.map((item, i) => {
                 let lastElem = false;
@@ -83,7 +84,7 @@ const Footer = () => {
                   lastElem = true;
                 }
                 return (
-                  <Box mr={!lastElem ? { base: "0px", md: "83px" } : 0}>
+                  <Box key={'footer-nav-item' + i} mr={!lastElem ? { base: "0px", md: "83px" } : 0}>
                     <Heading color='#FFFEFE' fontSize={{ base: '18px', md: '18px' }} fontWeight='500' lineHeight='131%'>
                       {item.label}
                     </Heading>
@@ -95,6 +96,7 @@ const Footer = () => {
                         }
                         return (
                           <ListItem
+                            key={'footer-nav-child' + j}
                             color='#D0D0D0'
                             display='flex'
                             alignItems='start'
