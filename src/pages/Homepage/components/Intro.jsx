@@ -31,7 +31,7 @@ import {
                 lineHeight={{ base: '37px', lg: '59px' }}
                 fontWeight={500}
                 fontSize={{ base: '28px', lg: '45px' }}>
-                <Text as={'span'} color={'#232426'}>
+                <Text as={'span'} color={'#232426'} fontFamily="Garnet Medium">
                   All-in-One Payments and Communications solution to grow your business
                 </Text>
               </Heading>

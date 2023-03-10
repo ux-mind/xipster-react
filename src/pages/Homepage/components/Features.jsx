@@ -45,7 +45,7 @@ const Features = () => {
     return (
         <Box p={{ base: "64px 0 70px", xl: "71px 0 76px" }} bg={"#20201D"} w={"100%"} color={"white"}>
         <Container maxW={'1278px'} py={0}  px={{ base: "24px", xl: 0 }}>
-            <Heading fontSize={{ base: '24px', md: '36px' }} fontWeight={'500px'} textAlign={"center"}>
+            <Heading fontFamily="Tiempos Headline" fontSize={{ base: '24px', md: '36px' }} fontWeight={'500px'} textAlign={"center"}>
                 Powerful features of Xipster
             </Heading>
 
@@ -79,7 +79,7 @@ const Features = () => {
                         lineHeight={{ base: '30px', md: '47px' }}
                         fontWeight={500}
                         fontSize={{ base: '24px', md: '36px' }}>
-                        <Text as={'span'} color={'#EDEDED'}>
+                        <Text as={'span'} color={'#EDEDED'} fontFamily="Garnet Medium">
                         Card on File
                         </Text>
                     </Heading>

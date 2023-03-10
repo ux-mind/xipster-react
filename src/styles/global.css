@@ -1,3 +1,19 @@
+@font-face {
+    font-family: 'Tiempos Headline';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('../fonts/TiemposHeadline-Medium.woff2') format('woff2'), url('../fonts/TiemposHeadline-Medium.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Garnet Medium';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('../fonts/Garnett-Medium.woff2') format('woff2'), url('../fonts/Garnett-Medium.woff') format('woff');
+}
+
 body {
     font-family: "Montserrat";
 }

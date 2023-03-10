@@ -85,7 +85,7 @@ const Footer = () => {
                 }
                 return (
                   <Box key={'footer-nav-item' + i} mr={!lastElem ? { base: "0px", md: "83px" } : 0}>
-                    <Heading color='#FFFEFE' fontSize={{ base: '18px', md: '18px' }} fontWeight='500' lineHeight='131%'>
+                    <Heading fontFamily="Garnet Medium" color='#FFFEFE' fontSize={{ base: '18px', md: '18px' }} fontWeight='500' lineHeight='131%'>
                       {item.label}
                     </Heading>
                     <UnorderedList ml={0} mt='24px' maxW='148px' w='max-content'>

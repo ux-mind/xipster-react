@@ -64,6 +64,7 @@ const Card = ({ image, title, text }) => {
                 </Box>
             </Box>
             <Heading
+                fontFamily="Garnet Medium"
                 fontSize={{ base: '20px', md: '20px' }}
                 fontWeight={'500px'}
                 textAlign={"center"}
@@ -114,7 +115,7 @@ const Optimize = () => {
     return (
         <Box p={{ base: "120px 0 120px", md: "150px 0 150px" }} w={"100%"} color={"#232426"}>
         <Container maxW={'1278px'} py={0}  px={{ base: "24px", xl: 0 }}>
-            <Heading fontSize={{ base: '24px', md: '36px' }} fontWeight={'500px'} textAlign={"center"}>
+            <Heading fontFamily="Garnet Medium" fontSize={{ base: '24px', md: '36px' }} fontWeight={'500px'} textAlign={"center"}>
                 Optimize Profitability & Operate on a Higher Level
             </Heading>
             <Grid

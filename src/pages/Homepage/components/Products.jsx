@@ -31,6 +31,7 @@ const Card = ({ heading, description, icon, href }) => {
         <Image w={{ base: '45px', md: '60px' }} h={{ base: '45px', md: '60px' }} src={icon} alt="" />
         <Box mt={{ base: '12px', md: '24px' }}>
           <Heading
+            fontFamily="Garnet Medium"
             fontWeight={500}
             textTransform={"uppercase"}
             fontSize={{ base: '18px', md: '20px' }}>
@@ -76,7 +77,7 @@ const Products = () => {
 
       <Container w={"100%"} maxW={'1278px'} py={0} px={{ base: "24px", xl: 0 }}>
         <Stack spacing={{ base: '9px', md: '16px' }} textAlign={'center'}>
-          <Heading fontSize={{ base: '24px', md: '36px' }} fontWeight={{ base: '500px', md: '400px' }}>
+          <Heading fontFamily="Tiempos Headline" fontSize={{ base: '24px', md: '36px' }} fontWeight={{ base: '500px', md: '400px' }}>
             2 Powerful Products in One
           </Heading>
           <Text color={'#232426'} fontSize={{ base: '16px', md: '18px' }}>
@@ -141,7 +142,11 @@ const Products = () => {
                 lineHeight={{ base: '30px', md: '45px' }}
                 fontWeight={500}
                 fontSize={{ base: '24px', md: '36px' }}>
-                <Text as={'span'} color={'#20201D'} textTransform={'uppercase'}>
+                <Text
+                  fontFamily="Garnet Medium"
+                  as={'span'}
+                  color={'#20201D'}
+                  textTransform={'uppercase'}>
                   Best-in-class Customer Experience
                 </Text>
               </Heading>

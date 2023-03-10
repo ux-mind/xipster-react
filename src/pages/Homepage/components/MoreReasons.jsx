@@ -25,6 +25,7 @@ const ListElement = ({text, title, lastElem}) => {
       />
       <Box ml={{ base: '16px', md: '24px' }}>
         <Heading
+          fontFamily="Garnet Medium"
           lineHeight={"25px"}
           textTransform={'uppercase'}
           fontWeight={500}
@@ -110,7 +111,7 @@ const MoreReasons = () => {
                   if (i+1 === listItems.length) {
                     lastElem = true;
                   }
-                  return <ListElement key={'list-item-' + i} title={elem.title} text={elem.text} lastElem={lastElem} />
+                  return <ListElement key={'list-item-' + i} fontFamily="Garnet Medium" title={elem.title} text={elem.text} lastElem={lastElem} />
                 })}
               </UnorderedList>
             </Box>

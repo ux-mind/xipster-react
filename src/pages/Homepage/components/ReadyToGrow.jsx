@@ -38,7 +38,7 @@ const ReadyToGrow = () => {
                 lineHeight='131%'
                 fontWeight={500}
                 fontSize={{ base: '24px', md: '36px' }}>
-                <Text as='span' color='white'>
+                <Text fontFamily="Garnet Medium" as='span' color='white'>
                   Ready to grow with Xipster?
                 </Text>
               </Heading>

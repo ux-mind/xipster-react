@@ -40,6 +40,7 @@ const Card = ({ name, description, logo, date }) => {
               lineHeight={"124%"}
               color={"#3722DA"}
               textTransform={"uppercase"}
+              fontFamily="Garnet Medium"
             >
               {name}
             </Box>
@@ -63,7 +64,7 @@ const CustomersFeedback = () => {
     <Box w={"100%"}>
 
       <Container w={"100%"} maxW={'1278px'} py={0} px={{ base: "24px", xl: 0 }}>
-        <Heading textAlign={"center"} fontSize={{ base: '24px', md: '36px' }} fontWeight={'500'} lineHeight={"131%"}>
+        <Heading fontFamily="Garnet Medium" textAlign={"center"} fontSize={{ base: '24px', md: '36px' }} fontWeight={'500'} lineHeight={"131%"}>
           What Our Customers Think About Us
         </Heading>
 
