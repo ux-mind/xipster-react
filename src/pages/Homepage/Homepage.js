@@ -7,6 +7,7 @@ import { Products } from './components';
 import { Features } from './components';
 import { Optimize } from './components';
 import { MoreReasons } from './components';
+import { CustomersFeedback } from './components';
 
 const Homepage = () => (
   <Page
@@ -18,6 +19,7 @@ const Homepage = () => (
     <Features />
     <Optimize />
     <MoreReasons />
+    <CustomersFeedback />
     
   </Page>
 );
