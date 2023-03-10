@@ -6,6 +6,7 @@ import { Intro } from './components';
 import { Products } from './components';
 import { Features } from './components';
 import { Optimize } from './components';
+import { MoreReasons } from './components';
 
 const Homepage = () => (
   <Page
@@ -16,6 +17,7 @@ const Homepage = () => (
     <Products />
     <Features />
     <Optimize />
+    <MoreReasons />
     
   </Page>
 );
