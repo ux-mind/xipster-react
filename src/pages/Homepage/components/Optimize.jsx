@@ -30,8 +30,8 @@ const Card = ({ image, title, text }) => {
                 borderRadius={"25px 25px 0 0"}
             >
                 <Box
-                    w={"213px"}
-                    h={"213px"}
+                    w={{ base: "213px", md: "267px" }}
+                    h={{ base: "213px", md: "264px" }}
                     bg={"white"}
                     boxShadow={"0px 4px 9px rgba(0, 0, 0, 0.15)"}
                     borderRadius={"15px"}
