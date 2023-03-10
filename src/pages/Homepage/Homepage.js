@@ -8,7 +8,8 @@ import {
   Features,
   Optimize,
   MoreReasons,
-  CustomersFeedback
+  CustomersFeedback,
+  ReadyToGrow
 } from './components';
 
 const Homepage = () => (
@@ -22,6 +23,7 @@ const Homepage = () => (
     <Optimize />
     <MoreReasons />
     <CustomersFeedback />
+    <ReadyToGrow />
     
   </Page>
 );
