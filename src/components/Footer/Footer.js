@@ -9,12 +9,11 @@ import {
   Box,
   Flex,
   Link,
-  Container,
   Image,
   Heading,
-  UnorderedList,
-  ListItem
-} from '@chakra-ui/react';
+  ListItem,
+  List
+} from '@chakra-ui/core';
 
 const SocialBlock = ({mobile}) => {
   return (
@@ -53,7 +52,7 @@ const Footer = () => {
       bg='#232426'
       pt={{ base: "32px", xl: "90px" }}
       pb={{ base: "54px", xl: "160px" }}>
-      <Container maxW='1278px' px={{ base: "24px", xl: 0 }}>
+      <Box ml='auto' mr='auto'  maxW='1278px' px={{ base: "24px", xl: 0 }}>
         <Flex
           align='center'>
           <Flex flex={{ base: 1 }} justify='start' direction={{ base: 'column', xl: 'row' }}>
@@ -88,7 +87,7 @@ const Footer = () => {
                     <Heading fontFamily="Garnet Medium" color='#FFFEFE' fontSize={{ base: '18px', md: '18px' }} fontWeight='500' lineHeight='131%'>
                       {item.label}
                     </Heading>
-                    <UnorderedList ml={0} mt='24px' maxW='148px' w='max-content'>
+                    <List ml={0} mt='24px' maxW='148px' w='max-content'>
                       {item.children.map((child, j) => {
                         let lastElem = false;
                         if (j+1 === item.children.length) {
@@ -113,7 +112,7 @@ const Footer = () => {
                           </ListItem>
                         );
                       })}
-                    </UnorderedList>
+                    </List>
                   </Box>
                 );
               })}
@@ -121,7 +120,7 @@ const Footer = () => {
             <SocialBlock mobile={true}/>
           </Flex>
         </Flex>
-      </Container>
+      </Box>
     </Box>
   );
 }

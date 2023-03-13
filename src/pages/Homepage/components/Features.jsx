@@ -1,7 +1,6 @@
 import {
     Box,
     Button,
-    Container,
     Flex,
     Heading,
     Icon,
@@ -9,7 +8,7 @@ import {
     Text,
     useColorModeValue,
     Image,
-  } from '@chakra-ui/react';
+  } from '@chakra-ui/core';
 import { ReactElement, useState } from 'react';
 
 import features_1 from '../../../images/features-1.svg';
@@ -118,7 +117,7 @@ const Features = () => {
     }
     return (
         <Box p={{ base: "64px 0 70px", xl: "71px 0 76px" }} bg={"#20201D"} w={"100%"} color={"white"}>
-        <Container maxW={'1278px'} py={0}  px={{ base: "24px", xl: 0 }}>
+        <Box ml='auto' mr='auto'  maxW={'1278px'} py={0}  px={{ base: "24px", xl: 0 }}>
             <Heading fontFamily="Tiempos Headline" fontSize={{ base: '24px', md: '36px' }} fontWeight={'500px'} textAlign={"center"}>
                 Powerful features of Xipster
             </Heading>
@@ -200,7 +199,7 @@ const Features = () => {
                     />
                 </Flex>
             </Stack>
-        </Container>
+        </Box>
         </Box>
     );
 }

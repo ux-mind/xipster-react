@@ -1,7 +1,6 @@
 import {
   Box,
   Button,
-  Container,
   Flex,
   Heading,
   Icon,
@@ -9,7 +8,7 @@ import {
   Text,
   useColorModeValue,
   Image
-} from '@chakra-ui/react';
+} from '@chakra-ui/core';
 import { ReactElement } from 'react';
 
 import product_1 from '../../../images/product-1.svg';
@@ -75,7 +74,7 @@ const Products = () => {
   return (
     <Box py={{ base: '120px', md: '150px' }} w={"100%"}>
 
-      <Container w={"100%"} maxW={'1278px'} py={0} px={{ base: "24px", xl: 0 }}>
+      <Box ml='auto' mr='auto'  w={"100%"} maxW={'1278px'} py={0} px={{ base: "24px", xl: 0 }}>
         <Stack spacing={{ base: '9px', md: '16px' }} textAlign={'center'}>
           <Heading fontFamily="Tiempos Headline" fontSize={{ base: '24px', md: '36px' }} fontWeight={{ base: '500px', md: '400px' }}>
             2 Powerful Products in One
@@ -161,7 +160,7 @@ const Products = () => {
               </Box>
             </Box>
           </Stack>
-      </Container>
+      </Box>
     </Box>
   );
 }

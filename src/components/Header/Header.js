@@ -16,17 +16,10 @@ import {
   Popover,
   PopoverTrigger,
   PopoverContent,
-  useColorModeValue,
   useBreakpointValue,
   useDisclosure,
-  Container,
   Image
-} from '@chakra-ui/react';
-import {
-  HamburgerIcon,
-  CloseIcon,
-  ChevronDownIcon,
-} from '@chakra-ui/icons';
+} from '@chakra-ui/core';
 
 const Header = () => {
   const { isOpen, onToggle } = useDisclosure();
@@ -35,7 +28,7 @@ const Header = () => {
     <Box
       bg={'#232426'}
       py={{ base: "21px", xl: "24px" }}>
-      <Container maxW={'1278px'} px={{ base: "24px", xl: 0 }}>
+      <Box maxW={'1278px'} ml='auto' mr='auto' px={{ base: "24px", xl: 0 }}>
         <Flex
           align={'center'}>
           <Flex flex={{ base: 1 }} justify={ 'start' }>
@@ -59,27 +52,22 @@ const Header = () => {
             justifyContent={ 'end' }
             ml={{ base: -2 }}
             display={{ base: 'flex', xl: 'none' }}>
-            <IconButton
-              /*onClick={onToggle}*/
-              icon={
-                isOpen ? <CloseIcon w={3} h={3} /> : <Image src={burger} alt="" w={"28px"} h={"28px"} />
-              }
-              h={"auto"}
-              variant={'ghost'}
-              aria-label={'Toggle Navigation'}
-              _hover={{
-                bg: 'none'
-              }}
-            />
+            <Link
+              as={"a"}
+              href={"/"}
+              display={"flex"}
+              alignItems={"center"}>
+              <Image src={burger} alt="" w={"28px"} h={"28px"} />
+            </Link>
           </Flex>
 
-          <Stack
+          <Flex
             display={{ base: 'none', xl: 'flex' }}
             flex={{ base: 1, md: 0 }}
             justify={'flex-end'}
-            direction={'row'}
-            spacing={6}>
+            direction={'row'}>
             <Link
+              mr='24px'
               as={"a"}
               href={"/"}
               display={"flex"}
@@ -87,6 +75,7 @@ const Header = () => {
               <img src={world} alt="world" />
             </Link>
             <Button
+              mr='24px'
               height={"50px"}
               px={"33px"}
               as={'a'}
@@ -121,14 +110,14 @@ const Header = () => {
               borderRadius={"12px"}
               borderColor={"white"}
               _hover={{
-                bg: 'none',
+                bg: 'rgba(255, 255, 255, 0.01)',
                 color: 'white',
               }}>
               Sign Up
             </Button>
-          </Stack>
+          </Flex>
         </Flex>
-      </Container>
+      </Box>
 
       <Collapse in={isOpen} animateOpacity>
         <MobileNav />
@@ -141,9 +130,14 @@ const DesktopNav = () => {
   const linkColor = 'white';
 
   return (
-    <Stack direction={'row'} spacing={'40px'}>
-      {NAV_ITEMS.map((navItem) => (
-        <Flex align="center" justify="center" key={navItem.label}>
+    <Flex direction={'row'} spacing={'40px'}>
+      {NAV_ITEMS.map((navItem, i) => {
+        let lastElem = false;
+        if (i+1 === NAV_ITEMS.lenght) {
+          lastElem = true;
+        }
+        return (
+        <Flex align="center" justify="center" key={navItem.label} mr={!lastElem ? '40px' : 0}>
           <Popover trigger={'hover'} placement={'bottom-start'}>
             <PopoverTrigger>
               <Link
@@ -159,15 +153,15 @@ const DesktopNav = () => {
             </PopoverTrigger>
           </Popover>
         </Flex>
-      ))}
-    </Stack>
+        )
+      })}
+    </Flex>
   );
 };
 
 const MobileNav = () => {
   return (
     <Stack
-      bg={useColorModeValue('white', 'gray.800')}
       p={4}
       display={{ md: 'none' }}>
       {NAV_ITEMS.map((navItem) => (
@@ -192,13 +186,12 @@ const MobileNavItem = ({ label, children, href }) => {
           textDecoration: 'none',
         }}>
         <Text
-          fontWeight={600}
-          color={useColorModeValue('gray.600', 'gray.200')}>
+          fontWeight={600}>
           {label}
         </Text>
         {children && (
           <Icon
-            as={ChevronDownIcon}
+            /* as={ChevronDownIcon} */
             transition={'all .25s ease-in-out'}
             transform={isOpen ? 'rotate(180deg)' : ''}
             w={6}
@@ -213,7 +206,6 @@ const MobileNavItem = ({ label, children, href }) => {
           pl={4}
           borderLeft={1}
           borderStyle={'solid'}
-          borderColor={useColorModeValue('gray.200', 'gray.700')}
           align={'start'}>
           {children &&
             children.map((child) => (

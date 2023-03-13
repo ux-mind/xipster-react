@@ -1,12 +1,11 @@
 import {
   Box,
   Button,
-  Container,
   Flex,
   Heading,
   Text,
   Image
-} from '@chakra-ui/react';
+} from '@chakra-ui/core';
 import { ReactElement } from 'react';
 
 import ready_to_grow_bg from '../../../images/ready-to-grow-bg.svg';
@@ -15,12 +14,14 @@ const ReadyToGrow = () => {
   return (
     <Box pt={{ base: '120px', md: '150px' }} pb={{ base: '100px', md: '150px' }} w='100%'>
 
-      <Container w='100%' maxW='1278px' py={0} px={{ base: '24px', xl: 0 }}>
+      <Box w='100%' maxW='1278px' ml='auto' mr='auto' py={0} px={{ base: '24px', xl: 0 }}>
 
         <Box
           overflow='hidden'
           position='relative'
-          bg='linear-gradient(174.91deg, #7B70EC -215.51%, #3722DA 143.79%)'
+          sx={{
+            background: 'red',
+          }}
           borderRadius='20px'
           spacing={0}
           align='center'
@@ -35,6 +36,7 @@ const ReadyToGrow = () => {
             />
             <Box>
               <Heading
+                textAlign='center'
                 lineHeight='131%'
                 fontWeight={500}
                 fontSize={{ base: '24px', md: '36px' }}>
@@ -43,6 +45,7 @@ const ReadyToGrow = () => {
                 </Text>
               </Heading>
               <Box
+                textAlign='center'
                 color='white'
                 mt={{ base: '8px', md: '16px' }}
                 fontSize={{ base: '16px', md: '18px' }}
@@ -76,7 +79,7 @@ const ReadyToGrow = () => {
                 borderRadius='12px'
                 borderColor='white'
                 _hover={{
-                  bg: 'none',
+                  bg: 'rgba(255, 255, 255, 0.01)',
                   color: 'white',
                 }}>
                 Get Xipster
@@ -103,7 +106,7 @@ const ReadyToGrow = () => {
               </Button>
             </Flex>
         </Box>
-      </Container>
+      </Box>
     </Box>
   );
 }

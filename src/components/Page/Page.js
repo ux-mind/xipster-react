@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flex } from '@chakra-ui/react';
+import { Flex } from '@chakra-ui/core';
 import { default as Header } from '../Header';
 import { default as Footer } from '../Footer';
 

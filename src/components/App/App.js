@@ -1,4 +1,5 @@
-import { ChakraProvider } from '@chakra-ui/react';
+
+import { ThemeProvider, CSSReset } from '@chakra-ui/core';
 import { RouterProvider } from 'react-router-dom';
 
 import { routerConfig } from '../../router';
@@ -6,20 +7,13 @@ import { routerConfig } from '../../router';
 import '../../styles/global.css';
 import '@fontsource/montserrat/500.css';
 import '@fontsource/montserrat/600.css';
-import { extendTheme } from '@chakra-ui/react';
-
-const theme = extendTheme({
-  fonts: {
-    heading: `'Montserrat', sans-serif`,
-    body: `'Montserrat', sans-serif`,
-  },
-})
 
 function App() {
   return (
-    <ChakraProvider theme={theme}>
+    <ThemeProvider>
+      <CSSReset />
       <RouterProvider router={routerConfig} />
-    </ChakraProvider>
+    </ThemeProvider>
   );
 }
 

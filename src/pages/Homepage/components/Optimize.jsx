@@ -1,13 +1,11 @@
 import {
     Box,
     Button,
-    Container,
     Heading,
     Grid,
-    GridItem,
     Text,
     Image
-  } from '@chakra-ui/react';
+  } from '@chakra-ui/core';
 import { ReactElement } from 'react';
 
 import logo_card from '../../../images/card-logo.svg';
@@ -18,10 +16,9 @@ import optimize_4 from '../../../images/optimize-4.png';
 import optimize_5 from '../../../images/optimize-5.png';
 import optimize_6 from '../../../images/optimize-6.png';
 
-
 const Card = ({ image, title, text }) => {
     return (
-        <GridItem w='100%' h='100%'>
+        <Box w='100%' h='100%'>
             <Box
                 w={"100%"}
                 h={{ base: "182px", md: "227px" }}
@@ -51,15 +48,15 @@ const Card = ({ image, title, text }) => {
                         bg={"#CCCCCC"}
                         m={{ base: "7px auto 0", md: "8px auto 0" }}
                     />
-                    <Box
-                        alt={""}
+                    <Image
+                        w={{ base: "178px", md: "223px" }}
+                        h={{ base: "132px", md: "165px" }}
                         mt={{ base: "19px", md: "23px" }}
                         ml={"auto"}
                         mr={"auto"}
-                        w={{ base: "178px", md: "223px" }}
-                        h={{ base: "132px", md: "165px" }}
-                        bg={"url(" + image + ")"}
-                        backgroundSize="cover"
+                        objectFit='cover'
+                        alt={""}
+                        src={image}
                     />
                 </Box>
             </Box>
@@ -74,7 +71,7 @@ const Card = ({ image, title, text }) => {
             <Text fontSize={{ base: '16px', md: '16px' }} mt={"8px"} textAlign={"center"}>
                 {text}
             </Text>
-        </GridItem>
+        </Box>
     );
 };
 
@@ -114,7 +111,7 @@ const cards = [
 const Optimize = () => {
     return (
         <Box p={{ base: "120px 0 120px", md: "150px 0 150px" }} w={"100%"} color={"#232426"}>
-        <Container maxW={'1278px'} py={0}  px={{ base: "24px", xl: 0 }}>
+        <Box maxW={'1278px'} ml='auto' mr='auto' py={0}  px={{ base: "24px", xl: 0 }}>
             <Heading fontFamily="Garnet Medium" fontSize={{ base: '24px', md: '36px' }} fontWeight={'500px'} textAlign={"center"}>
                 Optimize Profitability & Operate on a Higher Level
             </Heading>
@@ -128,7 +125,7 @@ const Optimize = () => {
                     return <Card key={i} image={card.image} title={card.title} text={card.text} />
                 })}
             </Grid>
-        </Container>
+        </Box>
         </Box>
     );
 }

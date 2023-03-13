@@ -1,11 +1,10 @@
 import {
   Box,
-  Container,
   Flex,
   Heading,
   Text,
   Image
-} from '@chakra-ui/react';
+} from '@chakra-ui/core';
 import { ReactElement } from 'react';
 
 import customer_1 from '../../../images/customer-1.png';
@@ -63,7 +62,7 @@ const CustomersFeedback = () => {
   return (
     <Box w={"100%"}>
 
-      <Container w={"100%"} maxW={'1278px'} py={0} px={{ base: "24px", xl: 0 }}>
+      <Box ml='auto' mr='auto'  w={"100%"} maxW={'1278px'} py={0} px={{ base: "24px", xl: 0 }}>
         <Heading fontFamily="Garnet Medium" textAlign={"center"} fontSize={{ base: '24px', md: '36px' }} fontWeight={'500'} lineHeight={"131%"}>
           What Our Customers Think About Us
         </Heading>
@@ -94,7 +93,7 @@ const CustomersFeedback = () => {
             date={'16 December 2022'}
           />
         </Flex>
-      </Container>
+      </Box>
     </Box>
   );
 }

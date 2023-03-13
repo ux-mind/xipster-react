@@ -1,14 +1,13 @@
 import {
   Box,
-  Container,
   Flex,
   Heading,
   Stack,
   Text,
   Image,
   ListItem,
-  UnorderedList,
-} from '@chakra-ui/react';
+  List
+} from '@chakra-ui/core';
 import { ReactElement } from 'react';
 
 import list_icon from '../../../images/list-icon.svg';
@@ -66,7 +65,7 @@ const MoreReasons = () => {
   return (
     <Box pb={{ base: '100px', md: '150px' }} w={"100%"}>
 
-      <Container w={"100%"} maxW={'1278px'} py={0} px={{ base: "24px", xl: 0 }}>
+      <Box ml='auto' mr='auto'  w={"100%"} maxW={'1278px'} py={0} px={{ base: "24px", xl: 0 }}>
         <Stack spacing={{ base: '9px', md: '16px' }} textAlign={'center'}>
           <Heading fontSize={{ base: '24px', md: '36px' }} fontWeight={{ base: '500px', md: '500px' }}>
             More Reasons To Get Xipster
@@ -105,7 +104,7 @@ const MoreReasons = () => {
               pl={{ base: '0', md: '25px', xl: '0' }}
               minW={{ base: '0', sm: '350px' }}
             >
-              <UnorderedList ml={0}>
+              <List ml={0}>
                 {listItems.map((elem, i) => {
                   let lastElem = false;
                   if (i+1 === listItems.length) {
@@ -113,10 +112,10 @@ const MoreReasons = () => {
                   }
                   return <ListElement key={'list-item-' + i} fontFamily="Garnet Medium" title={elem.title} text={elem.text} lastElem={lastElem} />
                 })}
-              </UnorderedList>
+              </List>
             </Box>
           </Stack>
-      </Container>
+      </Box>
     </Box>
   );
 }
