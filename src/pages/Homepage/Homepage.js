@@ -24,7 +24,6 @@ const Homepage = () => (
     <MoreReasons />
     <CustomersFeedback />
     <ReadyToGrow />
-    
   </Page>
 );
 
