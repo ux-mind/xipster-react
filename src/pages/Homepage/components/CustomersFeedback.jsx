@@ -14,6 +14,7 @@ import customer_3 from '../../../images/customer-3.png';
 const Card = ({ name, description, logo, date }) => {
   return (
     <Box
+      position='relative'
       maxW={"full"}
       w={'full'}
       borderWidth="1px"
@@ -22,11 +23,17 @@ const Card = ({ name, description, logo, date }) => {
       overflow="hidden"
       p={{ base: '32px 24px 24px', md: '32px 24px 24px' }}>
       <Box align={{ base: 'left', md: 'center' }}>
-        <Image src={logo} alt="" w={"100%"}  maxW={{ base: '120px', md: '122px' }} />
-        <Box mt={{ base: '12px', md: '24px' }}>
+        <Image
+          top='32px'
+          left='23px'
+          position='absolute'
+          src={logo}
+          alt=""
+          w={"100%"}
+          maxW={{ base: '120px', md: '122px' }}/>
+        <Box mt={{ base: '80px', md: '80px' }}>
           <Text
             maxW={"800px"}
-            mt={{ base: '48px', md: '48px' }}
             fontSize={{ base: '14px', md: '16px' }}
             lineHeight={'140%'}
             fontWeight={500}>

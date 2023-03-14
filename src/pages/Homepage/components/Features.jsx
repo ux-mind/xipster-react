@@ -34,7 +34,7 @@ const Tab = ({ text, active, handleTabClick }) => {
             as={'a'}
             display={'inline-flex'}
             fontSize={{ base: '14px', md: '18px' }}
-            fontWeight={{ base: 600, md: 500 }}
+            fontWeight={{ base: 600, md: 600 }}
             color={active ? '#232426' : 'white'}
             href={'#'}
             bg={active ? 'white' : "none"}
@@ -121,7 +121,7 @@ const Features = () => {
             <Heading fontFamily="Tiempos Headline" fontSize={{ base: '24px', md: '36px' }} fontWeight={'500px'} textAlign={"center"}>
                 Powerful features of Xipster
             </Heading>
-            <Flex mt={{ base: '32px', md: '40px' }} gridGap={{ base: '12px', md: '16px' }} justify="left" flexWrap={"wrap"}>
+            <Flex mt={{ base: '32px', md: '40px' }} gridGap={{ base: '8px', md: '8px' }} justify="left" flexWrap={"wrap"}>
                 {tabs.map((tab, i) => {
                     let active = false;
                     if (activeTab === tab.title) {
@@ -173,6 +173,7 @@ const Features = () => {
                         color={'white'}
                         size={'sm'}
                         _hover={{
+                        background: '#292929',
                         textDecoration: 'none',
                     }}>
                         Learn more

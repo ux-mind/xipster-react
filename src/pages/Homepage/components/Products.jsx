@@ -25,10 +25,13 @@ const Card = ({ heading, description, icon, href }) => {
       borderRadius="20px"
       borderColor="#ECECEC"
       overflow="hidden"
+      display='flex'
+      justifyContent={{ base: 'start', md: 'center' }}
+      textAlign={{ base: 'left', md: 'center' }}
       p={{ base: '24px 16px', md: '46px' }}>
-      <Box align={{ base: 'left', md: 'center' }}>
-        <Image w={{ base: '45px', md: '60px' }} h={{ base: '45px', md: '60px' }} src={icon} alt="" />
-        <Box mt={{ base: '12px', md: '24px' }}>
+      <Box>
+        <Image display='initial' w={{ base: '45px', md: '60px' }} h={{ base: '45px', md: '60px' }} src={icon} alt="" />
+        <Box textAlign={{ base: 'left', md: 'center' }} mt={{ base: '12px', md: '24px' }}>
           <Heading
             fontFamily="Garnet Medium"
             fontWeight={500}
@@ -56,6 +59,7 @@ const Card = ({ heading, description, icon, href }) => {
           fontSize={"16px"}
           fontWeight={600}
           _hover={{
+            background: '#EEECFF',
             textDecoration: 'none',
         }}>
           Learn more

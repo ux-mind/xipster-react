@@ -90,8 +90,7 @@ const Header = () => {
               borderRadius={"12px"}
               borderColor={"white"}
               _hover={{
-                bg: 'white',
-                color: '#232426',
+                bg: '#292929',
               }}>
               Sign In
             </Button>
@@ -110,8 +109,7 @@ const Header = () => {
               borderRadius={"12px"}
               borderColor={"white"}
               _hover={{
-                bg: 'rgba(255, 255, 255, 0.01)',
-                color: 'white',
+                background: '#E4E4E4',
               }}>
               Sign Up
             </Button>
@@ -147,7 +145,9 @@ const DesktopNav = () => {
                 color={linkColor}
                 _hover={{
                   textDecoration: 'none',
-                }}>
+                  color: '#8A7BF0'
+                }}
+                >
                 {navItem.label}
               </Link>
             </PopoverTrigger>

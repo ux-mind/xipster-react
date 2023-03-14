@@ -50,7 +50,7 @@ import {
                 h={{ base: '50px', lg: '55px' }}
                 fontWeight={600}
                 fontSize={{ base: '16px', lg: '18px' }}
-                _hover={{ bg: 'white', color: '#232426', border: '1px solid #232426' }}>
+                _hover={{ background: '#6A5EE6' }}>
                 Get Xipster
               </Button>
             </Box>

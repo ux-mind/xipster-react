@@ -79,8 +79,7 @@ const ReadyToGrow = () => {
                 borderRadius='12px'
                 borderColor='white'
                 _hover={{
-                  bg: 'rgba(255, 255, 255, 0.01)',
-                  color: 'white',
+                  bg: '#E4E4E4',
                 }}>
                 Get Xipster
               </Button>
@@ -99,8 +98,7 @@ const ReadyToGrow = () => {
                 borderRadius='12px'
                 borderColor='white'
                 _hover={{
-                  bg: 'white',
-                  color: '#232426',
+                  bg: 'rgba(255, 255, 255, 0.15)',
                 }}>
                 See Pricing
               </Button>

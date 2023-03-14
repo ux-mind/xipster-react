@@ -67,7 +67,10 @@ const MoreReasons = () => {
 
       <Box ml='auto' mr='auto'  w={"100%"} maxW={'1278px'} py={0} px={{ base: "24px", xl: 0 }}>
         <Stack spacing={{ base: '9px', md: '16px' }} textAlign={'center'}>
-          <Heading fontSize={{ base: '24px', md: '36px' }} fontWeight={{ base: '500px', md: '500px' }}>
+          <Heading
+            fontFamily='Garnet Medium'
+            fontSize={{ base: '24px', md: '36px' }}
+            fontWeight={{ base: '500px', md: '500px' }}>
             More Reasons To Get Xipster
           </Heading>
         </Stack>
