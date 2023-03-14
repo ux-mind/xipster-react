@@ -7,7 +7,6 @@ import {
   Box,
   Flex,
   Text,
-  IconButton,
   Button,
   Stack,
   Collapse,
@@ -15,14 +14,12 @@ import {
   Link,
   Popover,
   PopoverTrigger,
-  PopoverContent,
-  useBreakpointValue,
   useDisclosure,
   Image
 } from '@chakra-ui/core';
 
 const Header = () => {
-  const { isOpen, onToggle } = useDisclosure();
+  const { isOpen } = useDisclosure();
 
   return (
     <Box
